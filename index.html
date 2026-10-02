@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dead Serious LLC — AI that means business</title>
+  <meta name="description" content="Dead Serious LLC builds practical, no-nonsense AI solutions for businesses that want results, not hype.">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dead Serious LLC — AI that means business">
+  <meta property="og:description" content="Practical, no-nonsense AI solutions for businesses that want results, not hype.">
+  <meta property="og:url" content="https://deadserious.ai/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0b0c'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Arial,sans-serif' font-size='38' font-weight='900' text-anchor='middle' fill='%23ff3b30'%3EDS%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --surface: #151517;
+      --border: #26262a;
+      --text: #f2f2f3;
+      --muted: #a0a0a8;
+      --accent: #ff3b30;
+      --max: 1080px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #fafaf9;
+        --surface: #ffffff;
+        --border: #e4e4e1;
+        --text: #111113;
+        --muted: #5c5c63;
+        --accent: #d92d20;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 900; letter-spacing: -0.02em; text-decoration: none; font-size: 1.1rem; }
+    .logo span { color: var(--accent); }
+    nav ul { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
+    nav a { text-decoration: none; color: var(--muted); font-size: 0.95rem; }
+    nav a:hover { color: var(--text); }
+
+    /* Hero */
+    .hero { padding: 120px 0 96px; }
+    .eyebrow {
+      color: var(--accent); font-weight: 700; font-size: 0.8rem;
+      letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 20px;
+    }
+    h1 {
+      font-size: clamp(2.6rem, 8vw, 5.5rem);
+      line-height: 1.02; letter-spacing: -0.04em; font-weight: 900;
+      margin: 0 0 24px; max-width: 14ch;
+    }
+    h1 em { font-style: normal; color: var(--accent); }
+    .lede { font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--muted); max-width: 56ch; margin: 0 0 36px; }
+    .btn {
+      display: inline-block; padding: 14px 26px; border-radius: 8px;
+      background: var(--accent); color: #fff; font-weight: 700;
+      text-decoration: none; border: 1px solid var(--accent);
+      transition: transform .15s ease, opacity .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); opacity: .92; }
+    .btn.ghost { background: transparent; color: var(--text); border-color: var(--border); margin-left: 8px; }
+
+    /* Sections */
+    section { padding: 88px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 16px; }
+    .section-intro { color: var(--muted); max-width: 60ch; margin: 0 0 48px; }
+
+    .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 28px;
+    }
+    .card .num { color: var(--accent); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.1em; }
+    .card h3 { margin: 10px 0 8px; font-size: 1.2rem; letter-spacing: -0.01em; }
+    .card p { margin: 0; color: var(--muted); }
+
+    /* Principles */
+    .principles { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+    .principles li {
+      display: grid; grid-template-columns: 1fr 2fr; gap: 24px;
+      padding: 24px 0; border-bottom: 1px solid var(--border);
+    }
+    .principles li:first-child { border-top: 1px solid var(--border); }
+    .principles strong { font-size: 1.15rem; letter-spacing: -0.01em; }
+    .principles span { color: var(--muted); }
+    @media (max-width: 640px) {
+      nav ul { gap: 16px; }
+      .principles li { grid-template-columns: 1fr; gap: 6px; }
+      .btn.ghost { margin: 12px 0 0; }
+      .hero { padding: 72px 0 64px; }
+    }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact h2 { margin-left: auto; margin-right: auto; }
+    .contact .section-intro { margin-left: auto; margin-right: auto; }
+    .email { font-size: clamp(1.3rem, 4vw, 2rem); font-weight: 800; letter-spacing: -0.02em; text-decoration: none; border-bottom: 3px solid var(--accent); }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 0; color: var(--muted); font-size: 0.9rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">DEAD<span>SERIOUS</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <p class="eyebrow">Dead Serious LLC</p>
+      <h1>AI, <em>dead serious</em> about results.</h1>
+      <p class="lede">We help businesses cut through the hype and put AI to work on real problems — with clear scope, honest timelines, and outcomes you can measure.</p>
+      <a class="btn" href="#contact">Start a conversation</a>
+      <a class="btn ghost" href="#what-we-do">See what we do</a>
+    </div>
+
+    <section id="what-we-do">
+      <div class="wrap">
+        <h2>What we do</h2>
+        <p class="section-intro">Three ways we can help. No buzzword bingo.</p>
+        <div class="grid">
+          <article class="card">
+            <span class="num">01</span>
+            <h3>AI Strategy</h3>
+            <p>Figure out where AI actually pays off in your business — and where it doesn't — before you spend a dollar.</p>
+          </article>
+          <article class="card">
+            <span class="num">02</span>
+            <h3>Custom Build</h3>
+            <p>Purpose-built AI tools and automations, shipped fast and designed to fit the way your team already works.</p>
+          </article>
+          <article class="card">
+            <span class="num">03</span>
+            <h3>Hands-On Advisory</h3>
+            <p>Ongoing, practical guidance for teams adopting AI: vendor selection, guardrails, and getting things into production.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap">
+        <h2>How we work</h2>
+        <p class="section-intro">The name is the policy.</p>
+        <ul class="principles">
+          <li><strong>Plain language</strong><span>If we can't explain it simply, we don't understand it well enough to sell it.</span></li>
+          <li><strong>Measurable outcomes</strong><span>Every engagement starts with a definition of "working" that you can check yourself.</span></li>
+          <li><strong>Straight answers</strong><span>If AI isn't the right tool for the job, we'll say so. It saves us both time.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>Let's talk.</h2>
+        <p class="section-intro">Tell us what you're trying to get done. We'll tell you honestly whether we can help.</p>
+        <a class="email" href="mailto:hello@deadserious.ai">hello@deadserious.ai</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> Dead Serious LLC. All rights reserved.</span>
+      <span>deadserious.ai</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
