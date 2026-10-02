@@ -1,6 +1,6 @@
 # deadserious.ai
 
-One-page website for Dead Serious LLC. Plain static HTML/CSS — no build step.
+One-page website for deadserious.ai. Plain static HTML/CSS — no build step.
 
 ## Local preview
 
