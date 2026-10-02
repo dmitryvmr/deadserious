@@ -6,6 +6,7 @@ One-page static website for the Dead Serious LLC business, hosted on GitHub Page
 - Plain static HTML/CSS, no build step, no dependencies. All CSS and JS are inline in `index.html`.
 - `index.html` — the whole site: header, hero, "What we do" (3 cards), "How we work", contact, footer.
 - `favicon.ico` (16/32/48/64) and `apple-touch-icon.png` (180) — red "DS" on a dark rounded square, generated with Pillow (no source logo exists yet).
+- `sitemap.xml` / `robots.txt` — sitemap (single URL) and robots pointing to it. Update `lastmod` when content changes.
 - `CNAME` — custom domain `deadserious.ai`. Don't delete or the domain breaks.
 - `.nojekyll` — serve files as-is.
 - `README.md` — local preview and DNS/Pages setup.
